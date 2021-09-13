@@ -46,6 +46,13 @@ body {
   width: 300px;
   margin: 5px;
 }
+
+.details-container{
+  background-color: #C7EEFF;
+  border-radius: 10px;
+  padding: 20px;
+  
+}
 .single-product {
   padding: 15px;
   transition: 0.6s;

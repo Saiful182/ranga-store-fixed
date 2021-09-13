@@ -21,7 +21,7 @@ const showProducts = (products) => {
       <h5>Ratting: ${product.rating.rate} <i style="color: yellow" class="fas fa-star"></i></h5>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="productDetails(${product.id})" id="details-btn" class="btn btn-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -73,7 +73,35 @@ const updateTaxAndCharge = () => {
     setInnerText("total-tax", priceConverted * 0.4);
   }
 };
+//product Details show on top
 
+const productDetails = (id) => {
+  const divParent = document.getElementById('product-details');
+  divParent.textContent = '';
+  const url = `https://fakestoreapi.com/products/${id}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(products => dataShow(products))
+
+  const dataShow = iteam => {
+    const description = iteam.description;
+    const totalSell = iteam.rating.count;
+
+    // product discription show on top
+    const div = document.createElement('div');
+    div.classList.add("details-container")
+
+    div.innerHTML = `
+    <h2>${iteam.title}</h2>
+    <h3>Total product sold:${totalSell}</h3>
+      <p>${description}</p>
+    `;
+    divParent.appendChild(div);
+
+  }
+
+}
 //grandTotal update function
 const updateTotal = () => {
   const grandTotal =
