@@ -93,8 +93,8 @@ const productDetails = (id) => {
     div.classList.add("details-container")
 
     div.innerHTML = `
-    <h2>${iteam.title}</h2>
-    <h2>Total product sold:${totalSell}</h2>
+    <h2>Product Name: ${iteam.title}</h2>
+    <h2>Total product sold: ${totalSell}</h2>
       <p>${description}</p>
     `;
     divParent.appendChild(div);
