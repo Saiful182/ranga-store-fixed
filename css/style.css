@@ -63,6 +63,7 @@ body {
 }
 .details-container h2,h3{
 font-size: 15px;
+font-weight: bold;
 }
 
 .single-product {
