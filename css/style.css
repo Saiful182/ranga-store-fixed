@@ -16,17 +16,26 @@ body {
 .search-box {
   border: 1px solid #C7EEFF;
   width: 281px;
-  border-radius: 6px;
+  border-radius: 10px;
   margin: auto;
   margin-top: 50px;
   border-right: none;
+ position: relative;
   
 }
+.btn{
+  padding:5px 11px !important;
+}
 .search-button {
+
   padding: 10px 50px;
   border-radius: 25px;
   margin-left: 20px;
   background-color:#C7EEFF;
+  position: absolute;
+  left: 191px;
+  top: -0.9px;
+  
 }
 
 #all-products {
