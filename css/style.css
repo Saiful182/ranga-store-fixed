@@ -26,10 +26,7 @@ body {
   margin-left: 20px;
   background-color:#C7EEFF;
 }
-/* .search-button:active {
-  border: 1px solid blue!important;
-  color:black !important;
-} */
+
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
